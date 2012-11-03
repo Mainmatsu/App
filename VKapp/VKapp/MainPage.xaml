@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="VKapp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VKapp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Main,Source={StaticResource Locator}}">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <ProgressRing IsActive="True" Margin="10,621,1205,10" Height="137" Width="151" />
+        <ListBox ItemsSource="{Binding Friends}" Width="300">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding FirstName}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Command="{Binding AddNewTagCommand}" Margin="1322,740,0,10"/>
+    </Grid>
+</Page>
