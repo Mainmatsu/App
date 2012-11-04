@@ -14,14 +14,9 @@ namespace VKapp.Repository
         //подумать о том где хранить песни.
         //в друзьях или всё в одном с ид друга 
 
-        InMamoryUserDataRepository()
-        {
-            Offset = 0;
-        }
+        private readonly FriendList _friends = new FriendList();
 
-        private readonly ObservableCollection<Person> _friends = new ObservableCollection<Person>();
-
-        public ObservableCollection<Person> Friends
+        public FriendList Friends
         {
             get { return _friends; }
         }
@@ -29,10 +24,26 @@ namespace VKapp.Repository
         public int Offset { get; set; }
 
         public Person I { get; set; }
+        
+        InMamoryUserDataRepository()
+        {
+            Offset = 0;
+            I = new Person(); 
+        }
 
-        public ObservableCollection<Song> GetSongsByFrind(int friendId)
+        public PlayList GetSongsByFrind(int friendId)
         {
             return _friends.FirstOrDefault(friend => friend.Id == friendId).Songs;
+        }
+
+        public async Task<Person> GetFriendById(int friendId)
+        {
+            Person person = null;
+            await Task.Run(() =>
+                                {
+                                   person = _friends.FirstOrDefault(friend => friend.Id == friendId);
+                                });
+            return person;
         }
 
         public void Add(Person friend)

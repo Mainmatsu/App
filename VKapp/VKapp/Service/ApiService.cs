@@ -20,10 +20,16 @@ namespace VKapp.Service
 
         public async Task<XDocument> GetApiAsync(string methodName, string parametrs, bool xml)
         {
-            return  XDocument.Load("https://api.vk.com/method/" + methodName +
-            (xml ? ".xml" : "") +
-            "?" + parametrs +
-            "&access_token=" + _notificationService.Current.Values["AppToken"]);
+            XDocument xDocument = null;
+            await Task.Run(() =>
+                         {
+                             xDocument= XDocument.Load("https://api.vk.com/method/" + methodName +
+                                            (xml ? ".xml" : "") +
+                                            "?" + parametrs +
+                                            "&access_token=" + _notificationService.Current.Values["AppToken"]);
+                         });
+
+            return xDocument;
         }
 
     }

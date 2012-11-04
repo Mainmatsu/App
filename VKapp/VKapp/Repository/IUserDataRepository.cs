@@ -10,12 +10,14 @@ namespace VKapp.Repository
 {
     public interface IUserDataRepository
     {
-        ObservableCollection<Person> Friends { get; }
+        FriendList Friends { get; }
+
         int Offset { get; set; }
 
         Person I { get; set; }
 
-        ObservableCollection<Song> GetSongsByFrind(int friendId);
+        PlayList GetSongsByFrind(int friendId);
+        Task<Person> GetFriendById(int friendId);
 
         //ChatUser GetUserById(string userId);
 

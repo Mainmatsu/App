@@ -22,13 +22,10 @@ C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\obj\Debug\
 C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\obj\Debug\VKapp.exe
 C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\obj\Debug\VKapp.pdb
 C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\obj\Debug\VKapp.csproj.GenerateResource.Cache
-C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\obj\Debug\priconfig.xml.intermediate
-C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\obj\Debug\layout.resfiles.intermediate
-C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\obj\Debug\resources.resfiles.intermediate
-C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\obj\Debug\pri.resfiles.intermediate
 C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\obj\Debug\priconfig.xml
 C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\obj\Debug\layout.resfiles
 C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\obj\Debug\resources.resfiles
 C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\obj\Debug\pri.resfiles
 C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\obj\Debug\LanguageQualifiers.txt
 C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\obj\Debug\ProjectArchitectures.txt
+C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\obj\Debug\VKapp.csprojResolveAssemblyReference.cache

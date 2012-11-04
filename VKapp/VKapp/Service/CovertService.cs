@@ -13,7 +13,7 @@ namespace VKapp.Service
 
         public async Task<string> ToAccessTokenAsync(string link)
         {
-            Regex regex = new Regex(@"accdess_token=+[0-9a-fA-F]*");
+            Regex regex = new Regex(@"access_token=+[0-9a-zA-Z]*");
             await Task.Run(() =>
                                {
                                    _token = regex.Match(link).ToString();

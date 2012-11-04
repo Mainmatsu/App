@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace VKapp.Service
 {
-    interface IApiService
+    public interface IApiService
     {
         Task<XDocument> GetApiAsync(string methodName, string parametrs, bool xml = true);
 

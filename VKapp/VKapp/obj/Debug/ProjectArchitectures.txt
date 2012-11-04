@@ -1,1 +1,1 @@
-C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\VKapp.csproj;neutral
+C:\Users\Семён\Documents\Visual Studio 2012\Projects\VKapp\VKapp\VKapp.csproj;neutral

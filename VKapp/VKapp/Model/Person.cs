@@ -9,6 +9,12 @@ namespace VKapp.Model
 {
     public class Person
     {
+
+        public Person()
+        {
+            Offset = 0;
+            Songs = new PlayList();
+        }
         public int Offset { get; set; }
         public int Counter { get; set; }
 
@@ -17,6 +23,6 @@ namespace VKapp.Model
         public string LastName { get; set; }
         public Uri Foto { get; set; }
         //Возможно заменить на IEnumer...
-        public ObservableCollection<Song> Songs { get; set; }
+        public PlayList Songs { get; set; }
     }
 }

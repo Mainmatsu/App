@@ -22,10 +22,17 @@ namespace VKapp.Service
         public ApplicationDataContainer Current { get; set; }
         private const string AppId = "3136886";
         private const string Settings = "audio,friends";
-        public bool IsLogin;
+
         private CoreWindow _coreWindow;
         private MessageDialog _messageDialog;
-        
+
+        public bool IsLogin
+        {
+            get
+            {
+                return Current.Values["AppToken"] == null ? false : true;
+            }
+        }
 
         public NotificationService(IConvertService convertService,IUserDataRepository userDataRepository)
         {
@@ -38,48 +45,45 @@ namespace VKapp.Service
         public async void LogInAsync()
         {
             var startUri = new Uri(
-               string.Format(@"https://oauth.vk.com/authorize?client_id={0}&scope={1}&redirect_uri=http://api.vk.com/blank.html&display=page&response_type=token", AppId, Settings));
+               string.Format(@"https://oauth.vk.com/authorize?client_id={0}&scope={1}&redirect_uri=http://api.vk.com/blank.html&display=touch&response_type=token", AppId, Settings));
 
             var endUri = new Uri("http://api.vk.com/blank.html");
+            WebAuthenticationResult webAuthenticationResult = null;
 
             try
             {
-                var webAuthenticationResult = await WebAuthenticationBroker.AuthenticateAsync(
-                WebAuthenticationOptions.None,
-                startUri,
-                endUri);
+                webAuthenticationResult = await WebAuthenticationBroker.AuthenticateAsync(
+                    WebAuthenticationOptions.None,
+                    startUri,
+                    endUri);
 
                 switch (webAuthenticationResult.ResponseStatus)
                 {
                     case WebAuthenticationStatus.Success:
-                        {
-                            var appToken = await _convertService.ToAccessTokenAsync(webAuthenticationResult.ResponseData);
-                            if (appToken != string.Empty)
-                                Current.Values["AppToken"] = appToken;
-
-
-                        } break;
+                        var appToken = await _convertService.ToAccessTokenAsync(webAuthenticationResult.ResponseData);
+                        if (appToken != string.Empty)
+                            Current.Values["AppToken"] = appToken;
+                        break;
                     case WebAuthenticationStatus.ErrorHttp:
-                        _messageDialog = new Windows.UI.Popups.MessageDialog("WebAuthentication Http Error", "Ошибка");
+                        _messageDialog = new Windows.UI.Popups.MessageDialog("Ошибка авторизации", "Ошибка авторизации");
                         await _messageDialog.ShowAsync();
                         LogInAsync();
                         break;
                     case WebAuthenticationStatus.UserCancel:
-                        _messageDialog = new Windows.UI.Popups.MessageDialog("Прервано пользователем", "Ошибка");
+                        _messageDialog = new Windows.UI.Popups.MessageDialog("Прервано пользователем", "Ошибка авторизации");
                         await _messageDialog.ShowAsync();
                         LogInAsync();
                         break;
                     default:
-                        _messageDialog = new Windows.UI.Popups.MessageDialog("Неудалось авторизироватся", "Ошибка");
+                        _messageDialog = new Windows.UI.Popups.MessageDialog("Неудалось авторизироватся", "Ошибка авторизации");
                         await _messageDialog.ShowAsync(); 
                         LogInAsync();
                         break;
-
                 }
             }
             catch
             {
-                
+                LogInAsync();
             }
         }
         public void LogOutAsync()

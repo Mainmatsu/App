@@ -14,7 +14,7 @@ namespace VKapp.Service
         void LogIn();
 
         // Friends
-        void LoadFriendsAsync(int offset);
+        void LoadFriends();
         void ChangeFriendPositionTo(int newPosition);
         void LoadFriendPlayList(int userId);
        

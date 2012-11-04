@@ -9,6 +9,7 @@ namespace VKapp.Service
 {
     interface INotificationService
     {
+        bool IsLogin { get;}
         ApplicationDataContainer Current { get; set; }
 
         void LogInAsync();

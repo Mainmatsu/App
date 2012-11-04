@@ -33,6 +33,15 @@ namespace VKapp
         /// обычно используется для настройки страницы.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            
         }
+
+        private void Play_Click_1(object sender, RoutedEventArgs e)
+        {
+            Player.AutoPlay = true;
+            Player.Play();
+        }
+
+
     }
 }
