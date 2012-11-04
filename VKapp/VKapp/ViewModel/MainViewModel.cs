@@ -26,74 +26,20 @@ namespace VKapp.ViewModel
     {
         private readonly IUserDataRepository _userDataRepository;
         private readonly IAppService _appService;
-        private Song _selectedIndex = new Song();
-
-        
-
-        public ObservableCollection<Song> Songs { get { return _userDataRepository.I.Songs; } }
-
-        public bool AutoPlay { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
         /// 
         /// 
-        private ICommand _addNewTagCommand;
-        private ICommand _playListSelectionChanged;
-
-        public ICommand PlayerSelectionChanged
-        {
-            get
-            {
-                if (_playListSelectionChanged == null)
-                    _playListSelectionChanged = new RelayCommand(SelectionChanged);
-
-                return _playListSelectionChanged;
-            }
-        }
-
-        public ICommand AddNewTagCommand
-        {
-            get
-            {
-                if (_addNewTagCommand == null)
-                    _addNewTagCommand = new RelayCommand(AddNewTagExecute);
-
-                return _addNewTagCommand;
-            }
-        }
-
-        public Song Selected
-        {
-            get
-            {
-                return _selectedIndex;
-            }
-            set
-            {
-                _selectedIndex = value;
-                RaisePropertyChanged("Selected");
-            }
-        }
 
         public MainViewModel(IUserDataRepository userDataRepository,IAppService appService)
-        {
-            _userDataRepository = userDataRepository;
+        {  
             _appService = appService;
-
-
             _appService.AuthenticateUser();
-        }
 
-        public void AddNewTagExecute()
-        {
-            _appService.LoadPlayList();
-        }
-
-        public void SelectionChanged()
-        {
-
+            _userDataRepository = userDataRepository;
+            
         }
 
     }

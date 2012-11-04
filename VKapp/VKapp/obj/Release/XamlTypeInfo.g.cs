@@ -116,75 +116,75 @@ namespace VKapp.VKapp_XamlTypeInfo
 
         private object Activate_3_ObservableObject() { return new global::GalaSoft.MvvmLight.ObservableObject(); }
 
-        private object Activate_7_DependencyObjectCollection() { return new global::Windows.UI.Interactivity.DependencyObjectCollection<global::Windows.UI.Interactivity.TriggerBase>(); }
+        private object Activate_10_DependencyObjectCollection() { return new global::Windows.UI.Interactivity.DependencyObjectCollection<global::Windows.UI.Interactivity.TriggerBase>(); }
 
-        private object Activate_12_DependencyObjectCollection() { return new global::Windows.UI.Interactivity.DependencyObjectCollection<global::Windows.UI.Interactivity.TriggerAction>(); }
+        private object Activate_15_DependencyObjectCollection() { return new global::Windows.UI.Interactivity.DependencyObjectCollection<global::Windows.UI.Interactivity.TriggerAction>(); }
 
-        private object Activate_16_DependencyObjectCollection() { return new global::Windows.UI.Interactivity.DependencyObjectCollection<global::Windows.UI.Interactivity.Behavior>(); }
+        private object Activate_19_DependencyObjectCollection() { return new global::Windows.UI.Interactivity.DependencyObjectCollection<global::Windows.UI.Interactivity.Behavior>(); }
 
-        private object Activate_18_EventTrigger() { return new global::Windows.UI.Interactivity.EventTrigger(); }
+        private object Activate_21_EventTrigger() { return new global::Windows.UI.Interactivity.EventTrigger(); }
 
-        private object Activate_21_InvokeCommandAction() { return new global::Windows.UI.Interactivity.InvokeCommandAction(); }
+        private object Activate_24_InvokeCommandAction() { return new global::Windows.UI.Interactivity.InvokeCommandAction(); }
 
-        private object Activate_24_MainPage() { return new global::VKapp.MainPage(); }
+        private object Activate_27_MainPage() { return new global::VKapp.MainPage(); }
 
-        private void VectorAdd_5_TriggerCollection(object instance, object item)
+        private void VectorAdd_8_TriggerCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Interactivity.TriggerBase>)instance;
             var newItem = (global::Windows.UI.Interactivity.TriggerBase)item;
             collection.Add(newItem);
         }
 
-        private void VectorAdd_6_AttachableCollection(object instance, object item)
+        private void VectorAdd_9_AttachableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Interactivity.TriggerBase>)instance;
             var newItem = (global::Windows.UI.Interactivity.TriggerBase)item;
             collection.Add(newItem);
         }
 
-        private void VectorAdd_7_DependencyObjectCollection(object instance, object item)
+        private void VectorAdd_10_DependencyObjectCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Interactivity.TriggerBase>)instance;
             var newItem = (global::Windows.UI.Interactivity.TriggerBase)item;
             collection.Add(newItem);
         }
 
-        private void VectorAdd_10_TriggerActionCollection(object instance, object item)
+        private void VectorAdd_13_TriggerActionCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Interactivity.TriggerAction>)instance;
             var newItem = (global::Windows.UI.Interactivity.TriggerAction)item;
             collection.Add(newItem);
         }
 
-        private void VectorAdd_11_AttachableCollection(object instance, object item)
+        private void VectorAdd_14_AttachableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Interactivity.TriggerAction>)instance;
             var newItem = (global::Windows.UI.Interactivity.TriggerAction)item;
             collection.Add(newItem);
         }
 
-        private void VectorAdd_12_DependencyObjectCollection(object instance, object item)
+        private void VectorAdd_15_DependencyObjectCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Interactivity.TriggerAction>)instance;
             var newItem = (global::Windows.UI.Interactivity.TriggerAction)item;
             collection.Add(newItem);
         }
 
-        private void VectorAdd_14_BehaviorCollection(object instance, object item)
+        private void VectorAdd_17_BehaviorCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Interactivity.Behavior>)instance;
             var newItem = (global::Windows.UI.Interactivity.Behavior)item;
             collection.Add(newItem);
         }
 
-        private void VectorAdd_15_AttachableCollection(object instance, object item)
+        private void VectorAdd_18_AttachableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Interactivity.Behavior>)instance;
             var newItem = (global::Windows.UI.Interactivity.Behavior)item;
             collection.Add(newItem);
         }
 
-        private void VectorAdd_16_DependencyObjectCollection(object instance, object item)
+        private void VectorAdd_19_DependencyObjectCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Interactivity.Behavior>)instance;
             var newItem = (global::Windows.UI.Interactivity.Behavior)item;
@@ -231,6 +231,9 @@ namespace VKapp.VKapp_XamlTypeInfo
                 userType = new global::VKapp.VKapp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VKapp.ViewModel.ViewModelLocator), GetXamlTypeByName("Object"));
                 userType.Activator = Activate_0_ViewModelLocator;
                 userType.AddMemberName("Main");
+                userType.AddMemberName("FriendList");
+                userType.AddMemberName("PlayList");
+                userType.AddMemberName("Player");
                 xamlType = userType;
                 break;
 
@@ -250,6 +253,21 @@ namespace VKapp.VKapp_XamlTypeInfo
                 xamlType = userType;
                 break;
 
+            case "VKapp.ViewModel.FriendListViewModel":
+                userType = new global::VKapp.VKapp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VKapp.ViewModel.FriendListViewModel), GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
+                xamlType = userType;
+                break;
+
+            case "VKapp.ViewModel.PlayListViewModel":
+                userType = new global::VKapp.VKapp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VKapp.ViewModel.PlayListViewModel), GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
+                xamlType = userType;
+                break;
+
+            case "VKapp.ViewModel.PlayerViewModel":
+                userType = new global::VKapp.VKapp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VKapp.ViewModel.PlayerViewModel), GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
+                xamlType = userType;
+                break;
+
             case "Windows.UI.Interactivity.Interaction":
                 userType = new global::VKapp.VKapp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Windows.UI.Interactivity.Interaction), GetXamlTypeByName("Object"));
                 userType.AddMemberName("Triggers");
@@ -259,7 +277,7 @@ namespace VKapp.VKapp_XamlTypeInfo
 
             case "Windows.UI.Interactivity.TriggerCollection":
                 userType = new global::VKapp.VKapp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Windows.UI.Interactivity.TriggerCollection), GetXamlTypeByName("Windows.UI.Interactivity.AttachableCollection<Windows.UI.Interactivity.TriggerBase>"));
-                userType.CollectionAdd = VectorAdd_5_TriggerCollection;
+                userType.CollectionAdd = VectorAdd_8_TriggerCollection;
                 xamlType = userType;
                 break;
 
@@ -267,7 +285,7 @@ namespace VKapp.VKapp_XamlTypeInfo
                 userType = new global::VKapp.VKapp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Windows.UI.Interactivity.AttachableCollection<global::Windows.UI.Interactivity.TriggerBase>), GetXamlTypeByName("Windows.UI.Interactivity.DependencyObjectCollection<Windows.UI.Interactivity.TriggerBase>"));
                 AddToMapOfTypeToStandardName(typeof(global::Windows.UI.Interactivity.AttachableCollection<global::Windows.UI.Interactivity.TriggerBase>),
                                                    "Windows.UI.Interactivity.AttachableCollection<Windows.UI.Interactivity.TriggerBase>");
-                userType.CollectionAdd = VectorAdd_6_AttachableCollection;
+                userType.CollectionAdd = VectorAdd_9_AttachableCollection;
                 xamlType = userType;
                 break;
 
@@ -275,8 +293,8 @@ namespace VKapp.VKapp_XamlTypeInfo
                 userType = new global::VKapp.VKapp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Windows.UI.Interactivity.DependencyObjectCollection<global::Windows.UI.Interactivity.TriggerBase>), GetXamlTypeByName("Windows.UI.Xaml.FrameworkElement"));
                 AddToMapOfTypeToStandardName(typeof(global::Windows.UI.Interactivity.DependencyObjectCollection<global::Windows.UI.Interactivity.TriggerBase>),
                                                    "Windows.UI.Interactivity.DependencyObjectCollection<Windows.UI.Interactivity.TriggerBase>");
-                userType.Activator = Activate_7_DependencyObjectCollection;
-                userType.CollectionAdd = VectorAdd_7_DependencyObjectCollection;
+                userType.Activator = Activate_10_DependencyObjectCollection;
+                userType.CollectionAdd = VectorAdd_10_DependencyObjectCollection;
                 xamlType = userType;
                 break;
 
@@ -294,7 +312,7 @@ namespace VKapp.VKapp_XamlTypeInfo
 
             case "Windows.UI.Interactivity.TriggerActionCollection":
                 userType = new global::VKapp.VKapp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Windows.UI.Interactivity.TriggerActionCollection), GetXamlTypeByName("Windows.UI.Interactivity.AttachableCollection<Windows.UI.Interactivity.TriggerAction>"));
-                userType.CollectionAdd = VectorAdd_10_TriggerActionCollection;
+                userType.CollectionAdd = VectorAdd_13_TriggerActionCollection;
                 xamlType = userType;
                 break;
 
@@ -302,7 +320,7 @@ namespace VKapp.VKapp_XamlTypeInfo
                 userType = new global::VKapp.VKapp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Windows.UI.Interactivity.AttachableCollection<global::Windows.UI.Interactivity.TriggerAction>), GetXamlTypeByName("Windows.UI.Interactivity.DependencyObjectCollection<Windows.UI.Interactivity.TriggerAction>"));
                 AddToMapOfTypeToStandardName(typeof(global::Windows.UI.Interactivity.AttachableCollection<global::Windows.UI.Interactivity.TriggerAction>),
                                                    "Windows.UI.Interactivity.AttachableCollection<Windows.UI.Interactivity.TriggerAction>");
-                userType.CollectionAdd = VectorAdd_11_AttachableCollection;
+                userType.CollectionAdd = VectorAdd_14_AttachableCollection;
                 xamlType = userType;
                 break;
 
@@ -310,8 +328,8 @@ namespace VKapp.VKapp_XamlTypeInfo
                 userType = new global::VKapp.VKapp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Windows.UI.Interactivity.DependencyObjectCollection<global::Windows.UI.Interactivity.TriggerAction>), GetXamlTypeByName("Windows.UI.Xaml.FrameworkElement"));
                 AddToMapOfTypeToStandardName(typeof(global::Windows.UI.Interactivity.DependencyObjectCollection<global::Windows.UI.Interactivity.TriggerAction>),
                                                    "Windows.UI.Interactivity.DependencyObjectCollection<Windows.UI.Interactivity.TriggerAction>");
-                userType.Activator = Activate_12_DependencyObjectCollection;
-                userType.CollectionAdd = VectorAdd_12_DependencyObjectCollection;
+                userType.Activator = Activate_15_DependencyObjectCollection;
+                userType.CollectionAdd = VectorAdd_15_DependencyObjectCollection;
                 xamlType = userType;
                 break;
 
@@ -325,7 +343,7 @@ namespace VKapp.VKapp_XamlTypeInfo
 
             case "Windows.UI.Interactivity.BehaviorCollection":
                 userType = new global::VKapp.VKapp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Windows.UI.Interactivity.BehaviorCollection), GetXamlTypeByName("Windows.UI.Interactivity.AttachableCollection<Windows.UI.Interactivity.Behavior>"));
-                userType.CollectionAdd = VectorAdd_14_BehaviorCollection;
+                userType.CollectionAdd = VectorAdd_17_BehaviorCollection;
                 xamlType = userType;
                 break;
 
@@ -333,7 +351,7 @@ namespace VKapp.VKapp_XamlTypeInfo
                 userType = new global::VKapp.VKapp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Windows.UI.Interactivity.AttachableCollection<global::Windows.UI.Interactivity.Behavior>), GetXamlTypeByName("Windows.UI.Interactivity.DependencyObjectCollection<Windows.UI.Interactivity.Behavior>"));
                 AddToMapOfTypeToStandardName(typeof(global::Windows.UI.Interactivity.AttachableCollection<global::Windows.UI.Interactivity.Behavior>),
                                                    "Windows.UI.Interactivity.AttachableCollection<Windows.UI.Interactivity.Behavior>");
-                userType.CollectionAdd = VectorAdd_15_AttachableCollection;
+                userType.CollectionAdd = VectorAdd_18_AttachableCollection;
                 xamlType = userType;
                 break;
 
@@ -341,8 +359,8 @@ namespace VKapp.VKapp_XamlTypeInfo
                 userType = new global::VKapp.VKapp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Windows.UI.Interactivity.DependencyObjectCollection<global::Windows.UI.Interactivity.Behavior>), GetXamlTypeByName("Windows.UI.Xaml.FrameworkElement"));
                 AddToMapOfTypeToStandardName(typeof(global::Windows.UI.Interactivity.DependencyObjectCollection<global::Windows.UI.Interactivity.Behavior>),
                                                    "Windows.UI.Interactivity.DependencyObjectCollection<Windows.UI.Interactivity.Behavior>");
-                userType.Activator = Activate_16_DependencyObjectCollection;
-                userType.CollectionAdd = VectorAdd_16_DependencyObjectCollection;
+                userType.Activator = Activate_19_DependencyObjectCollection;
+                userType.CollectionAdd = VectorAdd_19_DependencyObjectCollection;
                 xamlType = userType;
                 break;
 
@@ -353,7 +371,7 @@ namespace VKapp.VKapp_XamlTypeInfo
 
             case "Windows.UI.Interactivity.EventTrigger":
                 userType = new global::VKapp.VKapp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Windows.UI.Interactivity.EventTrigger), GetXamlTypeByName("Windows.UI.Interactivity.EventTriggerBase<Object>"));
-                userType.Activator = Activate_18_EventTrigger;
+                userType.Activator = Activate_21_EventTrigger;
                 userType.SetContentPropertyName("Windows.UI.Interactivity.EventTrigger.Actions");
                 userType.AddMemberName("EventName");
                 AddToMapOfTypeToStandardName(typeof(global::System.String),
@@ -386,14 +404,14 @@ namespace VKapp.VKapp_XamlTypeInfo
 
             case "Windows.UI.Interactivity.InvokeCommandAction":
                 userType = new global::VKapp.VKapp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Windows.UI.Interactivity.InvokeCommandAction), GetXamlTypeByName("Windows.UI.Interactivity.TriggerAction<Windows.UI.Xaml.FrameworkElement>"));
-                userType.Activator = Activate_21_InvokeCommandAction;
+                userType.Activator = Activate_24_InvokeCommandAction;
                 userType.AddMemberName("Command");
-                userType.AddMemberName("CommandParameter");
-                AddToMapOfTypeToStandardName(typeof(global::System.Object),
-                                                   "Object");
                 userType.AddMemberName("CommandName");
                 AddToMapOfTypeToStandardName(typeof(global::System.String),
                                                    "String");
+                userType.AddMemberName("CommandParameter");
+                AddToMapOfTypeToStandardName(typeof(global::System.Object),
+                                                   "Object");
                 xamlType = userType;
                 break;
 
@@ -411,7 +429,7 @@ namespace VKapp.VKapp_XamlTypeInfo
 
             case "VKapp.MainPage":
                 userType = new global::VKapp.VKapp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VKapp.MainPage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_24_MainPage;
+                userType.Activator = Activate_27_MainPage;
                 xamlType = userType;
                 break;
 
@@ -425,93 +443,108 @@ namespace VKapp.VKapp_XamlTypeInfo
             var that = (global::VKapp.ViewModel.ViewModelLocator)instance;
             return that.Main;
         }
-        private object get_1_Interaction_Triggers(object instance)
+        private object get_1_ViewModelLocator_FriendList(object instance)
+        {
+            var that = (global::VKapp.ViewModel.ViewModelLocator)instance;
+            return that.FriendList;
+        }
+        private object get_2_ViewModelLocator_PlayList(object instance)
+        {
+            var that = (global::VKapp.ViewModel.ViewModelLocator)instance;
+            return that.PlayList;
+        }
+        private object get_3_ViewModelLocator_Player(object instance)
+        {
+            var that = (global::VKapp.ViewModel.ViewModelLocator)instance;
+            return that.Player;
+        }
+        private object get_4_Interaction_Triggers(object instance)
         {
             return global::Windows.UI.Interactivity.Interaction.GetTriggers((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private object get_2_TriggerBase_Actions(object instance)
+        private object get_5_TriggerBase_Actions(object instance)
         {
             var that = (global::Windows.UI.Interactivity.TriggerBase)instance;
             return that.Actions;
         }
-        private object get_3_TriggerAction_IsEnabled(object instance)
+        private object get_6_TriggerAction_IsEnabled(object instance)
         {
             var that = (global::Windows.UI.Interactivity.TriggerAction)instance;
             return that.IsEnabled;
         }
-        private void set_3_TriggerAction_IsEnabled(object instance, object Value)
+        private void set_6_TriggerAction_IsEnabled(object instance, object Value)
         {
             var that = (global::Windows.UI.Interactivity.TriggerAction)instance;
             that.IsEnabled = (global::System.Boolean)Value;
         }
-        private object get_4_Interaction_Behaviors(object instance)
+        private object get_7_Interaction_Behaviors(object instance)
         {
             return global::Windows.UI.Interactivity.Interaction.GetBehaviors((global::Windows.UI.Xaml.FrameworkElement)instance);
         }
-        private object get_5_EventTrigger_EventName(object instance)
+        private object get_8_EventTrigger_EventName(object instance)
         {
             var that = (global::Windows.UI.Interactivity.EventTrigger)instance;
             return that.EventName;
         }
-        private void set_5_EventTrigger_EventName(object instance, object Value)
+        private void set_8_EventTrigger_EventName(object instance, object Value)
         {
             var that = (global::Windows.UI.Interactivity.EventTrigger)instance;
             that.EventName = (global::System.String)Value;
         }
-        private object get_6_EventTriggerBase_Source(object instance)
+        private object get_9_EventTriggerBase_Source(object instance)
         {
             var that = (global::Windows.UI.Interactivity.EventTriggerBase<global::System.Object>)instance;
             return that.Source;
         }
-        private object get_7_EventTriggerBase_SourceObject(object instance)
+        private object get_10_EventTriggerBase_SourceObject(object instance)
         {
             var that = (global::Windows.UI.Interactivity.EventTriggerBase)instance;
             return that.SourceObject;
         }
-        private void set_7_EventTriggerBase_SourceObject(object instance, object Value)
+        private void set_10_EventTriggerBase_SourceObject(object instance, object Value)
         {
             var that = (global::Windows.UI.Interactivity.EventTriggerBase)instance;
             that.SourceObject = (global::System.Object)Value;
         }
-        private object get_8_EventTriggerBase_SourceName(object instance)
+        private object get_11_EventTriggerBase_SourceName(object instance)
         {
             var that = (global::Windows.UI.Interactivity.EventTriggerBase)instance;
             return that.SourceName;
         }
-        private void set_8_EventTriggerBase_SourceName(object instance, object Value)
+        private void set_11_EventTriggerBase_SourceName(object instance, object Value)
         {
             var that = (global::Windows.UI.Interactivity.EventTriggerBase)instance;
             that.SourceName = (global::System.String)Value;
         }
-        private object get_9_InvokeCommandAction_Command(object instance)
+        private object get_12_InvokeCommandAction_Command(object instance)
         {
             var that = (global::Windows.UI.Interactivity.InvokeCommandAction)instance;
             return that.Command;
         }
-        private void set_9_InvokeCommandAction_Command(object instance, object Value)
+        private void set_12_InvokeCommandAction_Command(object instance, object Value)
         {
             var that = (global::Windows.UI.Interactivity.InvokeCommandAction)instance;
             that.Command = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_10_InvokeCommandAction_CommandParameter(object instance)
-        {
-            var that = (global::Windows.UI.Interactivity.InvokeCommandAction)instance;
-            return that.CommandParameter;
-        }
-        private void set_10_InvokeCommandAction_CommandParameter(object instance, object Value)
-        {
-            var that = (global::Windows.UI.Interactivity.InvokeCommandAction)instance;
-            that.CommandParameter = (global::System.Object)Value;
-        }
-        private object get_11_InvokeCommandAction_CommandName(object instance)
+        private object get_13_InvokeCommandAction_CommandName(object instance)
         {
             var that = (global::Windows.UI.Interactivity.InvokeCommandAction)instance;
             return that.CommandName;
         }
-        private void set_11_InvokeCommandAction_CommandName(object instance, object Value)
+        private void set_13_InvokeCommandAction_CommandName(object instance, object Value)
         {
             var that = (global::Windows.UI.Interactivity.InvokeCommandAction)instance;
             that.CommandName = (global::System.String)Value;
+        }
+        private object get_14_InvokeCommandAction_CommandParameter(object instance)
+        {
+            var that = (global::Windows.UI.Interactivity.InvokeCommandAction)instance;
+            return that.CommandParameter;
+        }
+        private void set_14_InvokeCommandAction_CommandParameter(object instance, object Value)
+        {
+            var that = (global::Windows.UI.Interactivity.InvokeCommandAction)instance;
+            that.CommandParameter = (global::System.Object)Value;
         }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
@@ -527,82 +560,100 @@ namespace VKapp.VKapp_XamlTypeInfo
                 xamlMember.Getter = get_0_ViewModelLocator_Main;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "VKapp.ViewModel.ViewModelLocator.FriendList":
+                userType = (global::VKapp.VKapp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("VKapp.ViewModel.ViewModelLocator");
+                xamlMember = new global::VKapp.VKapp_XamlTypeInfo.XamlMember(this, "FriendList", "VKapp.ViewModel.FriendListViewModel");
+                xamlMember.Getter = get_1_ViewModelLocator_FriendList;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "VKapp.ViewModel.ViewModelLocator.PlayList":
+                userType = (global::VKapp.VKapp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("VKapp.ViewModel.ViewModelLocator");
+                xamlMember = new global::VKapp.VKapp_XamlTypeInfo.XamlMember(this, "PlayList", "VKapp.ViewModel.PlayListViewModel");
+                xamlMember.Getter = get_2_ViewModelLocator_PlayList;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "VKapp.ViewModel.ViewModelLocator.Player":
+                userType = (global::VKapp.VKapp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("VKapp.ViewModel.ViewModelLocator");
+                xamlMember = new global::VKapp.VKapp_XamlTypeInfo.XamlMember(this, "Player", "VKapp.ViewModel.PlayerViewModel");
+                xamlMember.Getter = get_3_ViewModelLocator_Player;
+                xamlMember.SetIsReadOnly();
+                break;
             case "Windows.UI.Interactivity.Interaction.Triggers":
                 userType = (global::VKapp.VKapp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Interactivity.Interaction");
                 xamlMember = new global::VKapp.VKapp_XamlTypeInfo.XamlMember(this, "Triggers", "Windows.UI.Interactivity.TriggerCollection");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_1_Interaction_Triggers;
+                xamlMember.Getter = get_4_Interaction_Triggers;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Windows.UI.Interactivity.TriggerBase.Actions":
                 userType = (global::VKapp.VKapp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Interactivity.TriggerBase");
                 xamlMember = new global::VKapp.VKapp_XamlTypeInfo.XamlMember(this, "Actions", "Windows.UI.Interactivity.TriggerActionCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_2_TriggerBase_Actions;
+                xamlMember.Getter = get_5_TriggerBase_Actions;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Windows.UI.Interactivity.TriggerAction.IsEnabled":
                 userType = (global::VKapp.VKapp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Interactivity.TriggerAction");
                 xamlMember = new global::VKapp.VKapp_XamlTypeInfo.XamlMember(this, "IsEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_3_TriggerAction_IsEnabled;
-                xamlMember.Setter = set_3_TriggerAction_IsEnabled;
+                xamlMember.Getter = get_6_TriggerAction_IsEnabled;
+                xamlMember.Setter = set_6_TriggerAction_IsEnabled;
                 break;
             case "Windows.UI.Interactivity.Interaction.Behaviors":
                 userType = (global::VKapp.VKapp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Interactivity.Interaction");
                 xamlMember = new global::VKapp.VKapp_XamlTypeInfo.XamlMember(this, "Behaviors", "Windows.UI.Interactivity.BehaviorCollection");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.FrameworkElement");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_4_Interaction_Behaviors;
+                xamlMember.Getter = get_7_Interaction_Behaviors;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Windows.UI.Interactivity.EventTrigger.EventName":
                 userType = (global::VKapp.VKapp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Interactivity.EventTrigger");
                 xamlMember = new global::VKapp.VKapp_XamlTypeInfo.XamlMember(this, "EventName", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_5_EventTrigger_EventName;
-                xamlMember.Setter = set_5_EventTrigger_EventName;
+                xamlMember.Getter = get_8_EventTrigger_EventName;
+                xamlMember.Setter = set_8_EventTrigger_EventName;
                 break;
             case "Windows.UI.Interactivity.EventTriggerBase<Object>.Source":
                 userType = (global::VKapp.VKapp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Interactivity.EventTriggerBase<Object>");
                 xamlMember = new global::VKapp.VKapp_XamlTypeInfo.XamlMember(this, "Source", "Object");
-                xamlMember.Getter = get_6_EventTriggerBase_Source;
+                xamlMember.Getter = get_9_EventTriggerBase_Source;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Windows.UI.Interactivity.EventTriggerBase.SourceObject":
                 userType = (global::VKapp.VKapp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Interactivity.EventTriggerBase");
                 xamlMember = new global::VKapp.VKapp_XamlTypeInfo.XamlMember(this, "SourceObject", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_7_EventTriggerBase_SourceObject;
-                xamlMember.Setter = set_7_EventTriggerBase_SourceObject;
+                xamlMember.Getter = get_10_EventTriggerBase_SourceObject;
+                xamlMember.Setter = set_10_EventTriggerBase_SourceObject;
                 break;
             case "Windows.UI.Interactivity.EventTriggerBase.SourceName":
                 userType = (global::VKapp.VKapp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Interactivity.EventTriggerBase");
                 xamlMember = new global::VKapp.VKapp_XamlTypeInfo.XamlMember(this, "SourceName", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_8_EventTriggerBase_SourceName;
-                xamlMember.Setter = set_8_EventTriggerBase_SourceName;
+                xamlMember.Getter = get_11_EventTriggerBase_SourceName;
+                xamlMember.Setter = set_11_EventTriggerBase_SourceName;
                 break;
             case "Windows.UI.Interactivity.InvokeCommandAction.Command":
                 userType = (global::VKapp.VKapp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Interactivity.InvokeCommandAction");
                 xamlMember = new global::VKapp.VKapp_XamlTypeInfo.XamlMember(this, "Command", "System.Windows.Input.ICommand");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_9_InvokeCommandAction_Command;
-                xamlMember.Setter = set_9_InvokeCommandAction_Command;
+                xamlMember.Getter = get_12_InvokeCommandAction_Command;
+                xamlMember.Setter = set_12_InvokeCommandAction_Command;
+                break;
+            case "Windows.UI.Interactivity.InvokeCommandAction.CommandName":
+                userType = (global::VKapp.VKapp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Interactivity.InvokeCommandAction");
+                xamlMember = new global::VKapp.VKapp_XamlTypeInfo.XamlMember(this, "CommandName", "String");
+                xamlMember.Getter = get_13_InvokeCommandAction_CommandName;
+                xamlMember.Setter = set_13_InvokeCommandAction_CommandName;
                 break;
             case "Windows.UI.Interactivity.InvokeCommandAction.CommandParameter":
                 userType = (global::VKapp.VKapp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Interactivity.InvokeCommandAction");
                 xamlMember = new global::VKapp.VKapp_XamlTypeInfo.XamlMember(this, "CommandParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_10_InvokeCommandAction_CommandParameter;
-                xamlMember.Setter = set_10_InvokeCommandAction_CommandParameter;
-                break;
-            case "Windows.UI.Interactivity.InvokeCommandAction.CommandName":
-                userType = (global::VKapp.VKapp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Interactivity.InvokeCommandAction");
-                xamlMember = new global::VKapp.VKapp_XamlTypeInfo.XamlMember(this, "CommandName", "String");
-                xamlMember.Getter = get_11_InvokeCommandAction_CommandName;
-                xamlMember.Setter = set_11_InvokeCommandAction_CommandName;
+                xamlMember.Getter = get_14_InvokeCommandAction_CommandParameter;
+                xamlMember.Setter = set_14_InvokeCommandAction_CommandParameter;
                 break;
             }
             return xamlMember;

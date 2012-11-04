@@ -16,6 +16,6 @@ namespace VKapp.Model
         public string Artist { get; set; }
         public string Title { get; set; }
         public string Text { get; set; }
-        public int Duration { get; set; }
+        public string Duration { get; set; }
     }
 }

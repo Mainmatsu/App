@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +13,9 @@ namespace VKapp.Repository
     {
         FriendList Friends { get; }
 
-        int Offset { get; set; }
+        Song SelectedSong { get; set; }
 
-        Person I { get; set; }
+        Person SelectedPerson { get; set; }
 
         PlayList GetSongsByFrind(int friendId);
         Task<Person> GetFriendById(int friendId);

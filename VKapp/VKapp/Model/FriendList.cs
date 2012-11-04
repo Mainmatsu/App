@@ -51,17 +51,18 @@ namespace VKapp.Model
 
                     _document = XDocument.Load("https://api.vk.com/method/" + _methodName +
                     (_xml ? ".xml" : "") +
-                    "?" + "count=" + count + "&offset=" + _offset + "&fields=uid,first_name,last_name,photo&order=hints"+
+                    "?" + "count=" + count + "&offset=" + _offset + "&fields=uid,first_name,last_name,photo_medium&order=hints" +
                     "&access_token=" + Current.Values["AppToken"]);
                 });
 
                 var downloadList = (from item in _document.Root.Elements()
                                     select new Person()
                                     {
-                                        Foto = new Uri(item.Element("photo").Value),
+                                        Foto = new Uri(item.Element("photo_medium").Value),
                                         FirstName = item.Element("first_name").Value,
                                         LastName = item.Element("last_name").Value,
-                                        Id = Convert.ToInt32(item.Element("uid").Value)
+                                        Id = Convert.ToInt32(item.Element("uid").Value),
+                                        Songs = new PlayList(Convert.ToInt32(item.Element("uid").Value))
                                     }).ToList();
 
                 foreach (var item in downloadList)

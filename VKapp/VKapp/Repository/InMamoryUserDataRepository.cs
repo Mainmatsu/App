@@ -16,19 +16,17 @@ namespace VKapp.Repository
 
         private readonly FriendList _friends = new FriendList();
 
+        public Song SelectedSong { get; set; }
+        public Person SelectedPerson { get; set; }
         public FriendList Friends
         {
             get { return _friends; }
         }
 
-        public int Offset { get; set; }
-
-        public Person I { get; set; }
-        
-        InMamoryUserDataRepository()
+        public InMamoryUserDataRepository()
         {
-            Offset = 0;
-            I = new Person(); 
+            SelectedSong = new Song();
+            SelectedPerson = new Person();
         }
 
         public PlayList GetSongsByFrind(int friendId)
@@ -49,7 +47,6 @@ namespace VKapp.Repository
         public void Add(Person friend)
         {
              _friends.Add(friend);
-             Offset++;
         }
 
         public void Add(Song song,Person friend)
@@ -59,13 +56,14 @@ namespace VKapp.Repository
 
         public void RemoveMy(Song song)
         {
-            I.Songs.Remove(song);
+            SelectedPerson.Songs.Remove(song);
+            
         }
 
         public void RemoveAll()
         {
             _friends.Clear();
-            I = null;
+            SelectedPerson = null;
         }
 
         public void CommitChanges()

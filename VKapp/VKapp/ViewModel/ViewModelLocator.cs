@@ -49,6 +49,9 @@ namespace VKapp.ViewModel
             SimpleIoc.Default.Register<IConvertService,ConvertService>();
             SimpleIoc.Default.Register<IUserDataRepository,InMamoryUserDataRepository>();
             SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<FriendListViewModel>();
+            SimpleIoc.Default.Register<PlayListViewModel>();
+            SimpleIoc.Default.Register<PlayerViewModel>();
         }
 
         public MainViewModel Main
@@ -56,6 +59,30 @@ namespace VKapp.ViewModel
             get
             {
                 return ServiceLocator.Current.GetInstance<MainViewModel>();
+            }
+        }
+
+        public FriendListViewModel FriendList
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<FriendListViewModel>();
+            }
+        }
+
+        public PlayListViewModel PlayList
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<PlayListViewModel>();
+            }
+        }
+
+        public PlayerViewModel Player
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<PlayerViewModel>();
             }
         }
         

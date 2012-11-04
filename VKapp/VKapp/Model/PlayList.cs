@@ -22,6 +22,7 @@ namespace VKapp.Model
         private int _offset;
         private XDocument _document;
 
+
         public PlayList(int userId = 0)
         {
             _xml = true;
@@ -41,6 +42,20 @@ namespace VKapp.Model
         public IAsyncOperation<LoadMoreItemsResult> LoadMoreItemsAsync(uint count)
         {
             return LoadDataAsync(count).AsAsyncOperation();
+        }
+
+        private string ConvertDuration(string duration)
+        {
+            int _duration = Convert.ToInt32(duration);
+            int _counter;
+
+            _counter = _duration/60;
+            _duration = _duration - 60*_counter;
+
+            if (_duration<10)
+                return string.Format("{0}:0{1}", _counter, _duration);
+            else
+                return string.Format("{0}:{1}",_counter,_duration);
         }
 
         public async Task<LoadMoreItemsResult> LoadDataAsync(uint count)
@@ -65,7 +80,8 @@ namespace VKapp.Model
                                         Id = item.Element("aid").Value,
                                         Uri = new Uri(item.Element("url").Value),
                                         Artist = item.Element("artist").Value,
-                                        Title = item.Element("title").Value
+                                        Title = item.Element("title").Value,
+                                        Duration = ConvertDuration(item.Element("duration").Value)
                                     }).ToList();
 
                 foreach (var item in downloadList)

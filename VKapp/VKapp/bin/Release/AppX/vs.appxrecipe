@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\bin\Release\VKapp.exe">
       <PackagePath>VKapp.exe</PackagePath>
-      <Modified>2012-11-04T17:30:00.642</Modified>
+      <Modified>2012-11-04T23:29:26.905</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\bin\Release\VKapp.pdb">
       <PackagePath>VKapp.pdb</PackagePath>
-      <Modified>2012-11-04T17:30:00.630</Modified>
+      <Modified>2012-11-04T23:29:26.893</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\bin\Release\GalaSoft.MvvmLight.Extras.Win8.dll">
       <PackagePath>GalaSoft.MvvmLight.Extras.Win8.dll</PackagePath>
@@ -70,15 +70,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\bin\Release\App.xaml">
       <PackagePath>App.xaml</PackagePath>
-      <Modified>2012-11-03T23:51:16.782</Modified>
+      <Modified>2012-11-04T19:02:40.836</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\bin\Release\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
-      <Modified>2012-11-04T00:27:56.998</Modified>
+      <Modified>2012-11-04T23:04:47.034</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\bin\Release\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2012-11-04T14:19:25.608</Modified>
+      <Modified>2012-11-04T23:29:26.242</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Семён\documents\visual studio 2012\Projects\VKapp\VKapp\bin\Release\resources.pri">
       <PackagePath>resources.pri</PackagePath>

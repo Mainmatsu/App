@@ -14,13 +14,9 @@ namespace VKapp.Service
         void LogIn();
 
         // Friends
-        void LoadFriends();
         void ChangeFriendPositionTo(int newPosition);
-        void LoadFriendPlayList(int userId);
        
-
         // Songs
-        void LoadPlayList();
         void RemoveSong();
         void AddSong();
         void ChangeSongPosition(int newPosition);
